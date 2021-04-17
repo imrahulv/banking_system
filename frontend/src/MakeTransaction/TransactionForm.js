@@ -8,7 +8,6 @@ class MakeTransaction extends Component {
     super(props);
     this.state = {
       allcustomers: [],
-
       selectFrom: "",
       selectTo: "",
       balance: "",
@@ -20,7 +19,6 @@ class MakeTransaction extends Component {
     fetch("http://localhost:3002/customers")
       .then((res) => res.json())
       .then((result) => {
-        console.log(result);
         this.setState({
           allcustomers: result,
         });
